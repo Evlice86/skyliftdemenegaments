@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Déménagement Pro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>  
+  <header>
+    <img src="logo1.jpg" alt="Logo Déménagement Pro" class="site-logo" />
+    <div class="menu">
+      <nav>
+        <ul id="menu">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#services">Nos Services</a></li>
+          <li><a href="#formulaire">Demandez un devis</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <select id="language-select">
+      <option value="fr">Français</option>
+      <option value="nl">Nederlands</option>
+      <option value="de">Deutsch</option>
+      <option value="en">English</option>
+      <option value="es">Español</option>
+    </select>
+  </header>
+
+  <main>
+    <section id="accueil">
+      <h1 id="main-title"></h1>
+      <p id="main-text"></p>
+    </section>
+
+    <section id="services" class="services">
+      <h2 id="services-title"></h2>
+      <p id="services-text" style="margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;"></p>
+
+      <div class="service">
+        <img src="https://www.demenageursbelgique.be/Images/animations/Demenageurs_B_1.jpg" alt="Eco" class="service-logo">
+        <div class="service-description">
+          <h3 id="eco-title"></h3>
+          <p id="eco-text"></p>
+        </div>
+      </div>
+
+      <div class="service">
+        <img src="https://xpertsource.com/_next/image?url=https%3A%2F%2Fimages.xpertsource.com%2Fpublic%2Fblogs%2Fff82a597-0a04-4ba4-8657-386bbfdc0077%2FXpertSource_preparer-demenagement-etapes_boites-demenagement.png&w=3840&q=75" alt="Standard" class="service-logo">
+        <div class="service-description">
+          <h3 id="standard-title"></h3>
+          <p id="standard-text"></p>
+        </div>
+      </div>
+
+      <div class="service">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYJnA7nxHYMfvW35yMvyWUHXx5gfthPGHAgKibP0Dt5JjwrfzlP7eU_8o_NHTa_pOj9Q&usqp=CAU" alt="Premium" class="service-logo">
+        <div class="service-description">
+          <h3 id="premium-title"></h3>
+          <p id="premium-text"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="formulaire" class="contact-form">
+      <h2 id="quote-title"></h2>
+      <form action="https://formspree.io/f/mwkaylkd" method="POST">
+        <input type="text" name="name" placeholder="Votre nom" required />
+        <input type="email" name="email" placeholder="Votre email" required />
+        <textarea name="details" placeholder="Détails du déménagement..." required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <section id="contact" class="map">
+      <h2 id="address-title"></h2>
+      <div id="google-map" style="width: 100%; height: 400px;">
+        <iframe
+          src="https://www.google.com/maps?q=Avenue+Van+Volxem+217,+1190+Forest,+Belgique&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const translations = {
+      fr: {
+        mainTitle: "Votre partenaire de déménagement professionnel SKY LIFT SERVICE",
+        mainText: "Nous facilitons votre déménagement avec une équipe fiable, rapide et expérimentée. Obtenez votre devis dès aujourd'hui !",
+        servicesTitle: "services",
+        servicesText: "Chez SKY LIFT SERVICE, nous offrons bien plus qu’un simple déménagement. Notre équipe de professionnels expérimentés prend en charge chaque étape de votre déménagement avec rigueur et efficacité. Grâce à notre service de lift moderne, nous assurons le transport sécurisé de vos meubles, même aux étages les plus élevés, sans aucun risque pour vos biens ou votre bâtiment. Que vous soyez un particulier ou une entreprise, nous adaptons nos solutions à vos besoins, dans un souci constant de qualité et de ponctualité. Faites confiance à notre savoir-faire pour un déménagement rapide, serein et 100 % professionnel.",
+        quoteTitle: "Demandez votre devis",
+        addressTitle: "Notre adresse",
+        ecoTitle: "Formule Éco",
+        ecoText: "Idéal pour un transport simple et rapide. Vous emballez, nous transportons.",
+        standardTitle: "Formule Standard",
+        standardText: "Nous emballons vos objets et assurons leur transport en toute sécurité.",
+        premiumTitle: "Formule Premium",
+        premiumText: "Emballage, transport et installation inclus. Déménagement clé en main.",
+        menu: ["Accueil", "Nos Services", "Demandez un devis", "Adresse"]
+      },
+      nl: {
+        mainTitle: "Uw professionele verhuispartner",
+        mainText: "We maken uw verhuizing eenvoudig met een betrouwbaar en ervaren team. Vraag vandaag nog uw offerte aan!",
+        servicesTitle: "Onze diensten",
+        servicesText: "Bij SKY LIFT SERVICE bieden wij veel meer dan alleen een verhuisdienst. Ons team van ervaren professionals verzorgt elke stap van uw verhuizing met zorg en precisie. Dankzij onze moderne liftservice kunnen we uw meubels veilig vervoeren, zelfs naar de hoogste verdiepingen, zonder risico voor uw bezittingen of gebouw. Of u nu particulier of zakelijk verhuist, we passen onze diensten aan uw behoeften aan met zorg voor kwaliteit en punctualiteit. Vertrouw op onze expertise voor een snelle, zorgeloze en volledig professionele verhuizing.",
+        quoteTitle: "Vraag een offerte aan",
+        addressTitle: "Ons adres",
+        ecoTitle: "Eco Formule",
+        ecoText: "U verpakt, wij vervoeren. Snel en eenvoudig.",
+        standardTitle: "Standaard Formule",
+        standardText: "Wij verpakken en vervoeren uw spullen veilig.",
+        premiumTitle: "Premium Formule",
+        premiumText: "Volledig pakket: inpakken, verhuizen en installeren.",
+        menu: ["Start", "Diensten", "Offerte", "Adres"]
+      },
+      de: {
+        mainTitle: "Ihr professioneller Umzugspartner",
+        mainText: "Wir machen Ihren Umzug einfach mit einem zuverlässigen und erfahrenen Team. Fordern Sie noch heute Ihr Angebot an!",
+        servicesTitle: "Unsere Dienstleistungen",
+        servicesText: "Bei SKY LIFT SERVICE bieten wir mehr als nur einen Umzugsservice. Unser Team von erfahrenen Fachleuten kümmert sich mit Sorgfalt und Präzision um jeden Schritt Ihres Umzugs. Mit unseren modernen Aufzügen können wir Ihre Möbel sicher transportieren, selbst in die höchsten Etagen, ohne Risiko für Ihr Eigentum oder Gebäude. Ob Privatperson oder Unternehmen, wir passen unsere Dienstleistungen an Ihre Bedürfnisse an und legen großen Wert auf Qualität und Pünktlichkeit. Vertrauen Sie unserer Expertise für einen schnellen, stressfreien und völlig professionellen Umzug.",
+        quoteTitle: "Fordern Sie ein Angebot an",
+        addressTitle: "Unsere Adresse",
+        ecoTitle: "Eco-Paket",
+        ecoText: "Ideal für schnellen, einfachen Transport. Sie verpacken, wir transportieren.",
+        standardTitle: "Standard-Paket",
+        standardText: "Wir verpacken und transportieren Ihre Sachen sicher.",
+        premiumTitle: "Premium-Paket",
+        premiumText: "Inklusive Verpackung, Transport und Einrichtung. Stressfreier Umzug.",
+        menu: ["Startseite", "Dienstleistungen", "Angebot anfordern", "Adresse"]
+      },
+      en: {
+        mainTitle: "Your professional moving partner",
+        mainText: "We make your move easy with a reliable, fast, and experienced team. Get your quote today!",
+        servicesTitle: "Our Services",
+        servicesText: "At SKY LIFT SERVICE, we provide more than just a moving service. Our team of skilled professionals manages every step of your move with care and precision. With our modern lift systems, we can safely transport your furniture to even the highest floors without risk to your belongings or building. Whether you're moving as an individual or a business, we tailor our services to your needs with a commitment to quality and timeliness. Trust our expertise for a fast, stress-free, and fully professional moving experience.",
+        quoteTitle: "Request a Quote",
+        addressTitle: "Our Address",
+        ecoTitle: "Eco Package",
+        ecoText: "Perfect for quick, simple transport. You pack, we move.",
+        standardTitle: "Standard Package",
+        standardText: "We safely pack and transport your belongings.",
+        premiumTitle: "Premium Package",
+        premiumText: "Includes packing, transport, and setup. Stress-free moving.",
+        menu: ["Home", "Services", "Get a Quote", "Address"]
+      },
+      es: {
+        mainTitle: "Su socio de mudanza profesional",
+        mainText: "Facilitamos su mudanza con un equipo confiable y experimentado. ¡Solicite su presupuesto hoy!",
+        servicesTitle: "Nuestros servicios",
+        servicesText: "En SKY LIFT SERVICE, ofrecemos mucho más que un simple servicio de mudanza. Nuestro equipo de profesionales experimentados se encarga de cada etapa de su mudanza con precisión y cuidado. Gracias a nuestros modernos elevadores, transportamos sus muebles de forma segura incluso a los pisos más altos, sin riesgos para sus pertenencias o edificio. Ya sea una mudanza particular o empresarial, adaptamos nuestras soluciones a sus necesidades con calidad y puntualidad. Confíe en nosotros para una mudanza rápida, segura y completamente profesional.",
+        quoteTitle: "Solicite un presupuesto",
+        addressTitle: "Nuestra dirección",
+        ecoTitle: "Paquete Económico",
+        ecoText: "Ideal para transporte simple. Usted embala, nosotros transportamos.",
+        standardTitle: "Paquete Estándar",
+        standardText: "Embalamos y transportamos sus pertenencias con seguridad.",
+        premiumTitle: "Paquete Premium",
+        premiumText: "Incluye embalaje, transporte e instalación. Mudanza sin estrés.",
+        menu: ["Inicio", "Servicios", "Presupuesto", "Dirección"]
+      }
+    };
+
+    const elements = {
+      mainTitle: "main-title",
+      mainText: "main-text",
+      servicesTitle: "services-title",
+      quoteTitle: "quote-title",
+      addressTitle: "address-title",
+      ecoTitle: "eco-title",
+      ecoText: "eco-text",
+      standardTitle: "standard-title",
+      standardText: "standard-text",
+      premiumTitle: "premium-title",
+      premiumText: "premium-text"
+    };
+
+    function updateLanguage(lang) {
+      const t = translations[lang];
+      for (const key in elements) {
+        document.getElementById(elements[key]).innerText = t[key];
+      }
+
+      document.getElementById("services-text").innerText = t.servicesText;
+
+      const menuLinks = document.querySelectorAll("#menu li a");
+      t.menu.forEach((text, i) => menuLinks[i].innerText = text);
+    }
+
+    document.getElementById("language-select").addEventListener("change", function () {
+      updateLanguage(this.value);
+    });
+
+    updateLanguage("fr");
+  </script>
+
+  <footer>
+    <h2>Contactez-nous</h2>
+    <p>Adresse: Avenue Van Volxem 217, 1190 Forest</p>
+    <p>Téléphone: 0489 87 98 99</p>
+    <p>Email: sky-lift@hotmail.com</p>
+  </footer>
+
+  <div class="contact-buttons">
+    <a href="tel:+33612345678" class="call-btn">
+      <i class="fas fa-phone"></i> Appeler
+    </a>
+    <a href="mailto:contact@monsite.com" class="mail-btn">
+      <i class="fas fa-envelope"></i> Envoyer un Email
+    </a>
+  </div>
+</body>
+</html>
