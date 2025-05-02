@@ -131,7 +131,7 @@ input, textarea {
   height: 400px;
 }
 
-/* Menu Responsif - Horizontal sur mobile */
+/* Menu Responsif - Garder menu horizontal même sur mobile */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: row; /* Menu horizontal sur mobile */
