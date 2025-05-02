@@ -131,40 +131,44 @@ input, textarea {
   height: 400px;
 }
 
-/* Menu Responsif - Garder menu horizontal même sur mobile */
+/* Menu Responsif - Assurer une disposition horizontale sans modification entre mobile et PC */
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem; /* Espacement constant */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Aucun changement de disposition pour le mobile */
 @media (max-width: 768px) {
+  /* Pas de changement dans le menu pour mobile */
   nav ul {
-    flex-direction: row; /* Menu horizontal sur mobile */
-    align-items: center;
+    gap: 1.5rem;
     justify-content: center;
-    width: 100%;
-    padding: 1rem 0;
-  }
-  
-  nav a {
-    padding: 1rem 2rem;
-    text-align: center;
-    width: auto; /* Retirer la largeur de 100% */
-    border-radius: 0;
   }
 
-  select {
-    margin-top: 1rem;
-  }
-  
-  .service {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .service-logo {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
-  }
-  
-  .service-description {
-    text-align: center;
+  nav a {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
   }
 }
 
